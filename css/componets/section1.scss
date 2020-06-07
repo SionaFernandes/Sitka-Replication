@@ -1,0 +1,43 @@
+.section1 {
+  background-image: url("../../../assets/images/section1.jpg");
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  padding: 0 20px;
+  .hero-content {
+    .sub-title {
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 700;
+      font-size: 14px;
+      &:before,
+      &:after {
+        background-color: #cdcfd6;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        width: 50px;
+      }
+      &:before {
+        right: 0.5em;
+      }
+      &:after {
+        left: 0.5em;
+      }
+    }
+    p {
+      line-height: 35px;
+      font-size: 22px;
+      letter-spacing: 0.5px;
+      margin-bottom: 50px;
+      @media only screen and (max-width: 768px) {
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

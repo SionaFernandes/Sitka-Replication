@@ -1,0 +1,13 @@
+.section3 {
+  padding-bottom: 60px;
+  .feature-item {
+    margin-bottom: 70px;
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+    .feature-img {
+      width: 48px;
+      margin-bottom: 25px;
+    }
+  }
+}

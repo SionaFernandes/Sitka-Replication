@@ -1,0 +1,80 @@
+body {
+  font-family: $main-font;
+  font-weight: 300;
+  color: $black;
+}
+.btn {
+  background-color: $red-light;
+  color: $white;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 9px;
+  box-shadow: 0px 0px 18px 6px rgba(138, 138, 138, 0.16);
+  transition: 0.18s;
+  border-radius: 0;
+  &:hover {
+    background: $red;
+    color: $white;
+    box-shadow: 0px 0px 18px 6px rgba(138, 138, 138, 0.22);
+  }
+  &.view {
+    padding: 17px 40.6px;
+  }
+  &.btn-black {
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+    padding: 18px 43px;
+    box-shadow: none;
+    transition: 0.18s;
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
+a {
+  color: $black;
+  &:hover {
+    text-decoration: none;
+    color: initial;
+  }
+}
+h1 {
+  font-family: $secondary-font;
+  font-size: 56px;
+  margin-bottom: 25px;
+  margin-top: 40px;
+  font-weight: 400;
+  @media only screen and (max-width: 768px) {
+    font-size: 36px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+}
+h2 {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  @media only screen and (max-width: 768px) {
+    font-size: 38px;
+  }
+}
+h4 {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 42px;
+}
+h5 {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+p {
+  font-size: 16px;
+  line-height: 27px;
+  color: $grey;
+}
