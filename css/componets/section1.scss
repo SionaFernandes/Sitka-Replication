@@ -5,12 +5,14 @@
   background-position: center;
   background-size: cover;
   padding: 0 20px;
+
   .hero-content {
     .sub-title {
       text-transform: uppercase;
       letter-spacing: 2.5px;
       font-weight: 700;
       font-size: 14px;
+
       &:before,
       &:after {
         background-color: #cdcfd6;
