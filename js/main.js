@@ -16,59 +16,72 @@ let sect3featureitem = $("#section3 .feature-item");
 let footerh3 = $("#footer h3");
 let footerbtn = $("#footer .btn");
 
-tl.from(header, { duration: 1, y: -100 })
-  .from(sec1span, {
-    duration: 1,
-    ease: "power4.out",
-    y: 100,
-    autoAlpha: 0,
-  })
-  .from(sec1h1, { duration: 1, ease: "power4.out", y: 100, autoAlpha: 0 })
-  .from(sec1p, { duration: 1, ease: "power4.out", y: 100, autoAlpha: 0 })
-  .from(sec1btn, { duration: 1, ease: "power4.out", y: 100, autoAlpha: 0 })
-  .from(sect2spacer, {
-    duration: 1,
-    ease: "power4.out",
-    y: 100,
-    autoAlpha: 0,
-  })
-  .from(sect2demoitem, {
-    duration: 1,
-    ease: "power4.out",
-    y: 100,
-    autoAlpha: 0,
-    stagger: 0.5,
-  })
-  .from(footerh3, {
-    duration: 1,
-    ease: "power4.out",
-    y: 100,
-    autoAlpha: 0,
-  })
-  .from(footerbtn, {
-    duration: 1,
-    ease: "power4.out",
-    y: 100,
-    autoAlpha: 0,
-  });
+ScrollTrigger.create({
+  trigger: "#header",
+  onToggle: (self) => {
+    animateSection1();
+  },
+  toggleActions: "restart pause resume pause",
+});
+ScrollTrigger.create({
+  trigger: "#section2",
+  onToggle: (self) => {
+    animateSection2();
+  },
+  toggleActions: "restart pause resume pause",
+});
 
 ScrollTrigger.create({
   trigger: "#section3",
   onToggle: (self) => {
     animateSection3();
   },
-  toggleActions: "play pause resume reset",
-  // onUpdate: (self) => {
-  //   console.log(
-  //     "progress:",
-  //     self.progress.toFixed(3),
-  //     "direction:",
-  //     self.direction,
-  //     "velocity",
-  //     self.getVelocity()
-  //   );
-  // },
+  toggleActions: "restart pause resume pause",
 });
+ScrollTrigger.create({
+  trigger: "#footer",
+  onToggle: (self) => {
+    animateSection4();
+  },
+  toggleActions: "restart pause resume pause",
+});
+
+function animateSection1() {
+  let tl1 = new TimelineMax();
+  tl1
+    .from(header, {
+      duration: 1,
+      ease: "power4.out",
+      y: 100,
+      autoAlpha: 0,
+    })
+    .from(sec1span, {
+      duration: 1,
+      ease: "power4.out",
+      y: 100,
+      autoAlpha: 0,
+    })
+    .from(sec1h1, { duration: 1, ease: "power4.out", y: 100, autoAlpha: 0 })
+    .from(sec1p, { duration: 1, ease: "power4.out", y: 100, autoAlpha: 0 })
+    .from(sec1btn, { duration: 1, ease: "power4.out", y: 100, autoAlpha: 0 });
+}
+function animateSection2() {
+  let tl2 = new TimelineMax();
+  tl2
+    .from(sect2spacer, {
+      duration: 1,
+      ease: "power4.out",
+      y: 100,
+      autoAlpha: 0,
+    })
+    .from(sect2demoitem, {
+      duration: 1,
+      ease: "power4.out",
+      y: 100,
+      autoAlpha: 0,
+      stagger: 0.5,
+    });
+}
 
 function animateSection3() {
   let tl3 = new TimelineMax();
@@ -85,5 +98,21 @@ function animateSection3() {
       y: 100,
       autoAlpha: 0,
       stagger: 0.3,
+    });
+}
+function animateSection4() {
+  let tl4 = new TimelineMax();
+  tl4
+    .from(footerh3, {
+      duration: 1,
+      ease: "power4.out",
+      y: 100,
+      autoAlpha: 0,
+    })
+    .from(footerbtn, {
+      duration: 1,
+      ease: "power4.out",
+      y: 100,
+      autoAlpha: 0,
     });
 }
